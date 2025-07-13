@@ -17,19 +17,16 @@
 
   programs = {
     home-manager.enable = true;
-    bash.enable = true;
   
     neovim = {
       enable = true;
       defaultEditor = true;
-      configure = {
-        customRC = ''
-          set background=dark
-          colorscheme gruvbox
-          set number
-        '';
-        packages.myVimPackage = with pkgs.vimPlugins; {
-          start = [ 
+      extraConfig = ''
+        set background=dark
+        colorscheme gruvbox
+        set number
+      '';
+      plugins = with pkgs.vimPlugins; [
         gruvbox 
         neo-tree-nvim
         nvim-web-devicons #neotree optional
@@ -51,12 +48,41 @@
         nvim-treesitter-parsers.html
         nvim-treesitter-parsers.css
       ];
-        };
-      };
+
       viAlias = true;
       vimAlias = true;
     };
 
+    zsh = {
+      enable = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      
+      shellAliases = {
+        ls = "lsd";
+        lt = "lsd --tree";
+        update = "sudo nixos-rebuild switch";
+        edit = "nvim ~/nixos-config/configuration.nix";
+      };
+    
+    #  initContent = ''
+    #    autoload -Uz vcs_info
+    #    zstyle ':vcs_info:*' enable git svn
+    #    zstyle ':vcs_info:git*' formats "- (%b)"
+    #    precmd() {
+    #      vcs_info
+    #    }
+    #    setopt prompt_subst
+    #    prompt='%F{yellow}%n@%m%f %F{red}%~%f %F{yellow}>%f ' 
+    #  '';
     };
-  };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    #--kitten themes --reload-in=all 'Gruvbox Dark'
+
+    };
 }
