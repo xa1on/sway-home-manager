@@ -1,8 +1,7 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
+{ config
+, pkgs
+, lib
+, ...
 }: {
   home = {
     username = "jaysa";
@@ -17,7 +16,13 @@
 
   programs = {
     home-manager.enable = true;
-  
+
+    kitty = {
+      enable = true;
+      enableGitIntegration = true;
+      themeFile = "gruvbox-dark-hard";
+    };
+
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -27,7 +32,7 @@
         set number
       '';
       plugins = with pkgs.vimPlugins; [
-        gruvbox 
+        gruvbox
         neo-tree-nvim
         nvim-web-devicons #neotree optional
         nvim-window-picker #neotree optional
@@ -53,36 +58,28 @@
       vimAlias = true;
     };
 
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     zsh = {
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
-      
+
       shellAliases = {
         ls = "lsd";
         lt = "lsd --tree";
         update = "sudo nixos-rebuild switch";
         edit = "nvim ~/nixos-config/configuration.nix";
       };
-    
-    #  initContent = ''
-    #    autoload -Uz vcs_info
-    #    zstyle ':vcs_info:*' enable git svn
-    #    zstyle ':vcs_info:git*' formats "- (%b)"
-    #    precmd() {
-    #      vcs_info
-    #    }
-    #    setopt prompt_subst
-    #    prompt='%F{yellow}%n@%m%f %F{red}%~%f %F{yellow}>%f ' 
-    #  '';
-    };
 
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    #--kitten themes --reload-in=all 'Gruvbox Dark'
+      # disable pulling in OCF's systemwide zshrc
+      envExtra = ''
+        unsetopt GLOBAL_RCS 
+      ''; 
 
     };
+  };
 }
