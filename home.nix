@@ -19,6 +19,10 @@
 
     kitty = {
       enable = true;
+      settings = {
+      	shell = "zsh";
+      };
+      shellIntegration.enableZshIntegration = true;
       enableGitIntegration = true;
       themeFile = "gruvbox-dark-hard";
     };
