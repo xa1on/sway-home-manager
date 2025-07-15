@@ -17,6 +17,12 @@
   programs = {
     home-manager.enable = true;
 
+    git = {
+        enable = true;
+	userName = "jaysa68";
+	userEmail = "gh@jaysa.net";
+    };
+
     kitty = {
       enable = true;
       settings = {
