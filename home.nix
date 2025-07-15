@@ -18,15 +18,15 @@
     home-manager.enable = true;
 
     git = {
-        enable = true;
-	userName = "jaysa68";
-	userEmail = "gh@jaysa.net";
+      enable = true;
+      userName = "jaysa68";
+      userEmail = "gh@jaysa.net";
     };
 
     kitty = {
       enable = true;
       settings = {
-      	shell = "zsh";
+        shell = "zsh";
       };
       shellIntegration.enableZshIntegration = true;
       enableGitIntegration = true;
@@ -88,7 +88,7 @@
       # disable pulling in OCF's systemwide zshrc
       envExtra = ''
         unsetopt GLOBAL_RCS 
-      ''; 
+      '';
 
     };
   };
