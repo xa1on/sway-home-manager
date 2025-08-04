@@ -23,10 +23,15 @@
       userEmail = "gh@jaysa.net";
     };
 
+    bash = {
+      enable = true;
+      bashrcExtra = "eval $(ssh-agent)";
+    };
+
     kitty = {
       enable = true;
       settings = {
-        shell = "zsh";
+        shell = "bash";
       };
       shellIntegration.enableZshIntegration = true;
       enableGitIntegration = true;
@@ -74,7 +79,7 @@
     };
 
     zsh = {
-      enable = true;
+      enable = false;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
 
