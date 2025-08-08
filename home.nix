@@ -25,7 +25,7 @@
 
     bash = {
       enable = true;
-      bashrcExtra = "eval $(ssh-agent)";
+      bashrcExtra = "eval $(ssh-agent) > /dev/null";
     };
 
     kitty = {
