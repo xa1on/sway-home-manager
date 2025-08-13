@@ -28,7 +28,6 @@
       settings = {
         shell = "bash";
       };
-      shellIntegration.enableZshIntegration = true;
       enableGitIntegration = true;
       themeFile = "gruvbox-dark-hard";
     };
