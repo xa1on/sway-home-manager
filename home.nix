@@ -88,6 +88,9 @@
         lt = "lsd --tree";
         update = "sudo nixos-rebuild switch";
         edit = "nvim ~/nixos-config/configuration.nix";
+	halloy = "WGPU_BACKEND=gl halloy";
+	fastfetch = "fastfetch --logo remote/flag.png";
+	neofetch = "fastfetch --logo remote/flag.png";
       };
 
       # disable pulling in OCF's systemwide zshrc
