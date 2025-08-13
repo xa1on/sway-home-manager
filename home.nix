@@ -23,11 +23,6 @@
       userEmail = "gh@jaysa.net";
     };
 
-    bash = {
-      enable = true;
-      bashrcExtra = "eval $(ssh-agent) > /dev/null";
-    };
-
     kitty = {
       enable = true;
       settings = {
@@ -78,10 +73,9 @@
       enableZshIntegration = true;
     };
 
-    zsh = {
-      enable = false;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
+    bash = {
+      enable = true;
+      bashrcExtra = "eval $(ssh-agent) > /dev/null";
 
       shellAliases = {
         ls = "lsd";
@@ -92,11 +86,6 @@
 	fastfetch = "fastfetch --logo remote/flag.png";
 	neofetch = "fastfetch --logo remote/flag.png";
       };
-
-      # disable pulling in OCF's systemwide zshrc
-      envExtra = ''
-        unsetopt GLOBAL_RCS 
-      '';
 
     };
   };
