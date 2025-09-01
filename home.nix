@@ -82,8 +82,8 @@
         update = "sudo nixos-rebuild switch";
         edit = "nvim ~/nixos-config/configuration.nix";
 	halloy = "WGPU_BACKEND=gl halloy";
-	fastfetch = "${config.home}/remote/repos/jaysa-laksith-secret-sharing/america.sh | fastfetch --file-raw - ";
-	neofetch = "${config.home}/remote/repos/jaysa-laksith-secret-sharing/america.sh | fastfetch --file-raw - ";
+	#fastfetch = "${config.home}/remote/repos/jaysa-laksith-secret-sharing/america.sh | fastfetch --file-raw - ";
+	#neofetch = "${config.home}/remote/repos/jaysa-laksith-secret-sharing/america.sh | fastfetch --file-raw - ";
       };
 
     };
