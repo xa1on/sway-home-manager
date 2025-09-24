@@ -18,10 +18,10 @@ I (`jaysa`) will be available for *minimal* assistance with debugging if you fin
 
 Resources:
 
-	- [home manager option search](https://home-manager-options.extranix.com/?query=sway&release=release-25.05)
+- [home manager option search](https://home-manager-options.extranix.com/?query=sway&release=release-25.05)
 
-	- [nixpkgs search](https://search.nixos.org/packages?=search)
+- [nixpkgs search](https://search.nixos.org/packages?=search)
 
-	- [man sway](https://man.archlinux.org/man/sway.5)
+- [man sway](https://man.archlinux.org/man/sway.5)
 
-	- [r/unixporn](https://www.reddit.com/r/unixporn/) for inspiration!
+- [r/unixporn](https://www.reddit.com/r/unixporn/) for inspiration!
