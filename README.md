@@ -17,7 +17,11 @@ Make sure to commit your final rice by or before 11PM PST 9/25/2025. We will onl
 I (`jaysa`) will be available for *minimal* assistance with debugging if you find yourself unable to perform a core part of the competition (i.e. you have issues with git, ssh, installing sway, etc).
 
 Resources:
+
 	- [home manager option search](https://home-manager-options.extranix.com/?query=sway&release=release-25.05)
+
 	- [nixpkgs search](https://search.nixos.org/packages?=search)
+
 	- [man sway](https://man.archlinux.org/man/sway.5)
+
 	- [r/unixporn](https://www.reddit.com/r/unixporn/) for inspiration!
