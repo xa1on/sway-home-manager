@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "jaysa";
-  home.homeDirectory = "/home/j/ja/jaysa";
+  home.username = "lic";
+  home.homeDirectory = "/home/l/li/lic";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -65,7 +65,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/jaysa/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/lic/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
@@ -107,8 +107,8 @@
     };
     git = {
       enable = true;
-      userName = "jaysa68";
-      userEmail = "gh@jaysa.net";
+      userName = "xa1on";
+      userEmail = "xalon.dzn@gmail.com";
     };
     neovim = {
       enable = true;
@@ -167,7 +167,7 @@
       output = {
         HDMI-A-2 = {
 	  scale = "1.6";
-	  bg = "/home/j/ja/jaysa/remote/sway-home-manager/wp-1.jpg fill";
+	  bg = "/home/l/li/lic/remote/home-manager/wp-1.jpg fill";
 	};
       };
       modifier = "Mod4";
@@ -182,7 +182,7 @@
         size = 16.0;
       };
       bars = [{ command = "waybar";}];
-      floating.criteria = [ { "app_id"=".*"; } ];
+      # floating.criteria = [ { "app_id"=".*"; } ];
       focus.followMouse = false;
     };
 

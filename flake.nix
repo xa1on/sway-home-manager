@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of jaysa";
+  description = "Home Manager configuration of lic";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
@@ -17,7 +17,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      homeConfigurations."jaysa" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."lic" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,
