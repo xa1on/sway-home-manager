@@ -171,9 +171,9 @@
 	};
       };
       modifier = "Mod4";
-      terminal = "kitty";
+      terminal = "konsole";
       keybindings = {
-       "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
+       "${modifier}+Return" = "exec ${pkgs.kdePackages.konsole}/bin/konsole";
        "${modifier}+c" = "kill";
        "${modifier}+g" = "exec ${pkgs.firefox}/bin/firefox";
       };
