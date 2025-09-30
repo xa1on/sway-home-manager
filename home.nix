@@ -166,7 +166,7 @@
     config = rec {
       output = {
         HDMI-A-2 = {
-	  scale = "1.6";
+	  scale = "1";
 	  bg = "/home/l/li/lic/remote/home-manager/wallpaper_city.jpg fill";
 	};
       };
@@ -178,7 +178,7 @@
        "${modifier}+g" = "exec ${pkgs.firefox}/bin/firefox";
       };
       fonts = {
-        size = 16.0;
+        size = 12.0;
       };
       bars = [{ command = "waybar";}];
       # floating.criteria = [ { "app_id"=".*"; } ];
