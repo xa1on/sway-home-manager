@@ -167,13 +167,12 @@
       output = {
         HDMI-A-2 = {
 	  scale = "1.6";
-	  bg = "/home/l/li/lic/remote/home-manager/wp-1.jpg fill";
+	  bg = "/home/l/li/lic/remote/home-manager/wallpaper_city.jpg fill";
 	};
       };
       modifier = "Mod4";
       terminal = "kitty";
       keybindings = {
-       "${modifier}+Space" = "exec ${pkgs.fuzzel}/bin/fuzzel";
        "${modifier}+Return" = "exec ${pkgs.kitty}/bin/kitty";
        "${modifier}+c" = "kill";
        "${modifier}+g" = "exec ${pkgs.firefox}/bin/firefox";
