@@ -73,34 +73,47 @@
 
   # Let Home Manager install and manage itself.
 
-  gtk.font.size = 32;
+  gtk.font.size = 60;
 
   programs = {
     fuzzel = {
       enable = true;
-      settings.main.anchor = "bottom-left";
+      settings = {
+        main = {
+          terminal = "${pkgs.kdePackages.konsole}";
+          anchor = "bottom";
+          font = "Hack:weight=light, size=8";
+        };
+        colors = {
+          background = "2929297d";
+          text = "ffffff7d";
+        };
+      };
     };
     waybar = {
       enable = true;
       settings = {
         mainBar = {
-          position = "bottom";
-	  modules-left = [ "custom/launcher" "wlr/taskbar" ];
-	  modules-right = [ "tray" ];
-	  "wlr/taskbar" = {
-	    "format" = "{icon}";
-	    "icon-size" = 48;
-	    "tootltip-format" = "{title}";
-	    "on-click" = "activate";
-	    "app_ids-mapping" = {
-	      "firefox" = "firefox";
-	    };
-	  };
-	  "custom/launcher" = {
-	    "format" = "menu";
-	    "icon-size" = 48;
-	    "tootltip-format" = "{title}";
-	    "on-click" = "fuzzel";
+          position = "top";
+	  margin-top = 3;
+	  margin-bottom = 3;
+	  height = 54;
+          modules-center = [ "wlr/taskbar" ];
+          modules-right = [ "tray" "clock" ];
+          "wlr/taskbar" = {
+            "format" = "{icon}";
+            "icon-size" = 32;
+            "tootltip-format" = "{title}";
+            "on-click" = "activate";
+            "app_ids-mapping" = {
+              "firefox" = "firefox";
+            };
+          };
+	  "clock" = {
+	    "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+	    "format" = "{:%F %T}";
+	    "format-alt" = "{:%F %T}";
+	    "interval" = 1;
 	  };
         };
       };
@@ -115,8 +128,8 @@
       defaultEditor = true;
       extraConfig = ''
         set background=dark
-	colorscheme gruvbox
-	set number
+        colorscheme gruvbox
+        set number
       '';
       plugins = with pkgs.vimPlugins; [
         gruvbox
@@ -152,7 +165,7 @@
       themeFile = "gruvbox-dark-hard";
       font = {
         name = "hack";
-        #size = 20.0;
+        size = 8.0;
       };
     };
   };
@@ -166,13 +179,14 @@
     config = rec {
       output = {
         HDMI-A-2 = {
-	  scale = "1";
-	  bg = "/home/l/li/lic/remote/home-manager/wallpaper_city.jpg fill";
-	};
+          scale = "1.25";
+          bg = "/home/l/li/lic/remote/home-manager/wallpaper_city.jpg fill";
+        };
       };
       modifier = "Mod4";
       terminal = "konsole";
       keybindings = {
+       "${modifier}+Space" = "exec ${pkgs.fuzzel}/bin/fuzzel";
        "${modifier}+Return" = "exec ${pkgs.kdePackages.konsole}/bin/konsole";
        "${modifier}+c" = "kill";
        "${modifier}+g" = "exec ${pkgs.firefox}/bin/firefox";
@@ -188,7 +202,5 @@
     extraConfig = ''
       title_align center
     '';
-
   };
-
 }
