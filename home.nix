@@ -3,7 +3,7 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "lic";
+  home.username = "lic"; 
   home.homeDirectory = "/home/l/li/lic";
 
   # This value determines the Home Manager release that your configuration is
@@ -99,7 +99,7 @@
 	  margin-bottom = 3;
 	  height = 54;
           modules-center = [ "wlr/taskbar" ];
-          modules-right = [ "tray" "clock" ];
+          modules-right = [];
           "wlr/taskbar" = {
             "format" = "{icon}";
             "icon-size" = 32;
@@ -111,7 +111,7 @@
           };
 	  "clock" = {
 	    "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-	    "format" = "{:%F %T}";
+	    "format" = "{:%H:%M}";
 	    "format-alt" = "{:%F %T}";
 	    "interval" = 1;
 	  };
